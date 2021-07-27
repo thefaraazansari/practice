@@ -22,7 +22,7 @@ section {
 
 #banner {
     padding: 2rem 5rem 1rem;
-    background: #ffe1c9 url(../assets/banner.png) right bottom no-repeat;
+    background: #ffe1c9 url(assets/banner.png) right bottom no-repeat;
     background-size: 60%;
 }
 
@@ -304,7 +304,7 @@ nav {
 }
 
 #data {
-    background: #fff url(../assets/calendar-frame.png) right no-repeat;
+    background: #fff url(assets/calendar-frame.png) right no-repeat;
     background-size: 40%;
     position: relative;
     margin: 0 10%;
