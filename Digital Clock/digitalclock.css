@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "DS-Digital";
+    src: url("DS-DIGII.TTF");
+}
+
+h1 {
+    font-family: "DS-Digital", arial;
+    font-size: 20rem;
+    text-align: center;
+    margin: 8rem;
+}

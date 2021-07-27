@@ -1,0 +1,290 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    padding-top: 1rem;
+    color: #222;
+    font-family: system-ui;
+}
+
+.container {
+    height: 640px;
+    position: relative;
+    width: 300px;
+    margin: auto;
+    border: 6px solid #000;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    overflow: hidden;
+}
+
+.container::before {
+    content: "";
+    border-radius: 50%;
+    width: 120%;
+    background-color: #f0e87d;
+    position: absolute;
+    aspect-ratio: 2/1;
+    left: -10%;
+    top: -5rem;
+}
+
+.menu-options {
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.back {
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+.back::before {
+    content: "";
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    border-left: 4px solid;
+    border-bottom: 4px solid;
+    transform: rotate(45deg);
+    top: 4px;
+    left: 4px;
+}
+
+.back::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 24px;
+    background-color: currentColor;
+    top: 50%;
+    left: 7px;
+    transform: translate(0%, -50%);
+}
+
+.options {
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    position: relative;
+}
+
+.options::before {
+    content: "";
+    position: absolute;
+    height: 6px;
+    width: 6px;
+    box-shadow: 0 8px 0 0, 0 16px 0 0;
+    border-radius: 3px;
+    background-color: currentColor;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.user-info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.user-info svg {
+    height: 4rem;
+    width: 4rem;
+}
+
+.user-heading {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-heading strong {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.task-container {
+    overflow: auto;
+    flex: 1;
+}
+
+.task-container::-webkit-scrollbar {
+    width: 4px;
+}
+
+.task-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 2px;
+}
+
+.task-container::-webkit-scrollbar-thumb {
+    background: #d5d5d5;
+    border-radius: 2px;
+}
+
+.task-info > *:not(div) {
+    margin-top: 3px;
+}
+
+.task-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.task-info input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.task-info > div {
+    flex: 1;
+    outline: 0;
+    word-break: break-all;
+}
+
+.task-info label {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.task-info input:checked ~ div {
+    color: #bbb;
+    text-decoration: line-through;
+}
+
+.task-info .checked {
+    height: 1.25rem;
+    width: 1.25rem;
+    background-color: #bbb;
+    border-radius: 4px;
+    border: 3px solid #bbb;
+    cursor: pointer;
+    display: none;
+    position: relative;
+}
+
+.task-info .checked::before {
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 10px;
+    top: 10%;
+    left: 10%;
+    transform: rotate(-45deg);
+    border-bottom: 3px solid #fff;
+    border-left: 3px solid #fff;
+}
+
+.task-info input:checked ~ label .checked {
+    display: block;
+}
+
+.task-info input:checked ~ label .unchecked {
+    display: none;
+}
+
+.task-info .unchecked {
+    height: 1.25rem;
+    width: 1.25rem;
+    border-radius: 4px;
+    border: 3px solid;
+    cursor: pointer;
+}
+
+.task-info .clear {
+    flex: none;
+    height: 16px;
+    width: 16px;
+    position: relative;
+    cursor: pointer;
+    background: none;
+    outline: 0;
+    border: 0;
+}
+
+.clear::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: currentColor;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.clear::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: currentColor;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+#add-btn {
+    position: absolute;
+    bottom: 1.5rem;
+    padding: 0;
+    background-color: #46d046;
+    right: 1.5rem;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 3rem;
+    height: 3rem;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.2);
+}
+
+#add-btn::before {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 20px;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#add-btn::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 4px;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text-msg {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 7rem;
+}
+
+.hide {
+    display: none;
+}

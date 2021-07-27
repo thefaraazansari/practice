@@ -1,0 +1,526 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+}
+
+body {
+    color: #2f2d52;
+    font-family: system-ui;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding-top: 6rem;
+}
+
+#banner {
+    padding: 2rem 5rem 1rem;
+    background: #ffe1c9 url(../assets/banner.png) right bottom no-repeat;
+    background-size: 60%;
+}
+
+nav {
+    z-index: 10;
+    display: flex;
+    height: 4rem;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    background-color: #2f2d52;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-around;
+    font-weight: 600;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.orange-text {
+    color: #e23e18;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.link {
+    padding: 0.5rem 4px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.active {
+    border-bottom: 4px solid #e23e18;
+}
+
+.nav-btn {
+    padding: 0 1rem;
+    height: 2.5rem;
+    border-radius: 4px;
+    border: 0;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+    background-color: #e23e18;
+}
+
+.container {
+    padding: 0 5rem;
+    margin: 5rem 0px 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 50rem;
+}
+
+.container h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    color: #242d5a;
+}
+
+.container p {
+    line-height: 1.5;
+    width: 80%;
+    font-size: 14px;
+}
+
+.input {
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    background-color: #fff;
+    width: 30rem;
+    border-radius: 4px;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 12%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.email {
+    padding: 8px;
+    border: 0;
+    outline: 0;
+    flex: 1;
+    height: 100%;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.free-trial {
+    padding: 0 1rem;
+    height: 2.5rem;
+    background-color: #e23e18;
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.grow-card {
+    padding: 2rem 5rem 3rem;
+    margin: -6rem 10% 4rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 16%);
+}
+
+.grow-card h3 {
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.card-info {
+    counter-reset: info;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.card-info span {
+    width: 20%;
+    position: relative;
+}
+
+.card-info span::before {
+    content: "0" counter(info);
+    position: absolute;
+    font-size: 2rem;
+    font-weight: bolder;
+    opacity: 0.2;
+    top: -20px;
+    left: -1rem;
+    counter-increment: info;
+}
+
+.shape {
+    width: 40%;
+}
+
+.shape img {
+    height: auto;
+    width: 100%;
+}
+
+#manage {
+    padding: 6rem 10% 0;
+    display: flex;
+    gap: 3rem;
+}
+
+.manage-info {
+    flex: 1;
+    padding-top: 4rem;
+}
+
+.manage-info > h1 {
+    font-size: 3rem;
+}
+
+.manage-info p {
+    margin-top: 2rem;
+}
+
+.manage-features p,
+.manage-features h1 {
+    margin-top: 1rem;
+}
+
+.icon-text {
+    margin-top: 1rem;
+    display: flex;
+    position: relative;
+}
+
+.icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    margin: 1rem;
+}
+
+.icon-text::before {
+    content: "";
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 0 100% 0 0;
+    background: #e23e18;
+    opacity: 0.3;
+    top: 12px;
+    left: 20px;
+}
+
+.icon-text:last-child::before {
+    border-radius: 2rem 0 0 2rem;
+    width: 1rem;
+}
+
+#build h1 {
+    text-align: center;
+    margin: auto;
+    font-size: 3rem;
+    width: 40rem;
+}
+
+.calendar {
+    margin-top: 3rem;
+}
+
+.calendar img {
+    height: auto;
+    border-radius: 1rem;
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 16%);
+    display: block;
+}
+
+.cards {
+    display: flex;
+    margin: 3rem 10% 3rem;
+    gap: 3rem;
+    justify-content: space-evenly;
+}
+
+.cards div {
+    box-shadow: 0 10px 20px rgb(0 0 0 / 16%);
+    border-radius: 1rem;
+    padding: 0 3rem 2rem;
+}
+
+.cards h3 {
+    font-size: 1.25rem;
+}
+
+.cards p {
+    margin-top: 1.5rem;
+    font-size: 14px;
+}
+
+.cards-icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    margin: 2rem 0 1rem 0;
+}
+
+.calendar {
+    position: relative;
+}
+
+.calendar::before {
+    content: "";
+    position: absolute;
+    height: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+    background: #ffe1c9;
+    top: -50px;
+    z-index: -1;
+    left: 16%;
+}
+
+.calendar::after {
+    content: "";
+    position: absolute;
+    height: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+    background: #e23e18;
+    bottom: -50px;
+    z-index: -1;
+    right: 16%;
+}
+
+#data {
+    background: #fff url(../assets/calendar-frame.png) right no-repeat;
+    background-size: 40%;
+    position: relative;
+    margin: 0 10%;
+}
+
+.automated-data {
+    max-width: 26rem;
+}
+
+.automated-data h1 {
+    font-size: 3rem;
+}
+
+.automated-data p {
+    margin-top: 1.5rem;
+    font-size: 14px;
+}
+
+.automated-data .free-trial {
+    margin-top: 2rem;
+}
+
+.done-list {
+    display: flex;
+    margin-top: 1rem;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.done-list div {
+    gap: 1rem;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.ultra {
+    position: absolute;
+    box-shadow: 0px 10px 20px rgb(0 0 0 / 16%);
+    background-color: #fff;
+    display: flex;
+    left: 50%;
+    max-width: 18rem;
+    border-radius: 1rem;
+    bottom: 1rem;
+}
+
+.ultra svg {
+    margin: 1rem 0 0 1rem;
+}
+
+.ultra > div {
+    width: 15rem;
+    padding: 1rem;
+}
+
+.ultra div p {
+    font-size: 14px;
+    margin-top: 0.5rem;
+}
+
+.color-circle {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.circle {
+    width: 1rem;
+    display: inline-block;
+    height: 1rem;
+    border-radius: 50%;
+}
+
+.circle1 {
+    background-color: #e23e18;
+}
+
+.circle2 {
+    background-color: #ffc494;
+}
+
+.circle3 {
+    background-color: #759bfd;
+}
+
+.circle4 {
+    background-color: #fff;
+    border: 2px solid #759bfd;
+}
+
+#customer {
+    margin: 0 10% 4rem;
+}
+
+#customer h1 {
+    font-size: 3rem;
+    width: 55%;
+}
+
+.arrow {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgb(0 0 0 / 16%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow:not(:first-child) {
+    margin-left: 2rem;
+}
+
+.comments {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.comment-card {
+    box-shadow: 0px 10px 20px rgb(0 0 0 / 16%);
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.comment-card-dark {
+    border-radius: 1rem;
+    padding: 1.5rem;
+    background-color: #f7efe9;
+}
+
+.comment-card h3,
+.comment-card-dark h3 {
+    font-size: 1.25rem;
+    margin-left: 1rem;
+}
+
+.comment-card p,
+.comment-card-dark p {
+    margin-top: 1rem;
+    font-size: 14px;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+#work-done {
+    background-color: #2f2d52;
+    padding: 6rem 0;
+    text-align: center;
+}
+
+#work-done h1 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+#work-done p {
+    color: #fff;
+    margin-bottom: 2rem;
+    padding: 0 30%;
+}
+
+#work-done .input {
+    margin: 0 auto;
+}
+
+.footer-info {
+    display: flex;
+    margin: 0 10% 3rem;
+    gap: 4rem;
+    justify-content: space-between;
+}
+
+.footer-revwide {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.footer-info a {
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+.footer-info .input {
+    width: 16rem;
+    padding-left: 1rem;
+}
+
+.footer-info .input button {
+    padding: 10px 10px;
+}
+
+.social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.copyright {
+    text-align: center;
+    margin-bottom: 2rem;
+}
